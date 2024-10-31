@@ -1,0 +1,67 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000; /* Change background to black */
+    color: white;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    transition: color 0.3s; /* Add transition for logo hover */
+  }
+  
+  .logo:hover {
+    color: #ffdd57; /* Change logo color on hover */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Add transform for scaling effect */
+  }
+  
+  .nav-links a:hover {
+    color: #ffdd57; /* Change link color on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+  }
+  
+  .mobile-menu-icon {
+    display: none; /* Hidden by default for desktop view */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  /* Mobile view styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: flex; /* Show flex in mobile view */
+      flex-direction: column;
+      overflow: hidden; /* Hide content overflow */
+      max-height: 0; /* Start with height 0 */
+      transition: max-height 0.3s ease; /* Animate the max height */
+      background-color: #000; /* Black background for mobile */
+      width: 100%;
+    }
+  
+    .nav-links-mobile {
+      max-height: 300px; /* Set to a max height when open */
+    }
+  
+    .mobile-menu-icon {
+      display: block; /* Show hamburger icon */
+    }
+  }
+  

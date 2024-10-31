@@ -1,0 +1,164 @@
+/* src/components/TranslatorCard.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .translator-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    color: #333;
+    text-align: center;
+  }
+  
+  .greeting {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between greeting and card */
+    align-self: flex-start; /* Align to the left */
+    padding-left: 20px; /* Add some left padding */
+  }
+  
+  .translator-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .translator-card h2 {
+    font-size: 1.8em;
+    color: #333;
+  }
+  
+  .text-area-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .input-section,
+  .output-section {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:disabled {
+    background-color: #aaa;
+  }
+  
+  select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Hover effects for buttons and controls */
+  .controls svg,
+  button:hover {
+    color: #0056b3;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .translator-card {
+      padding: 15px;
+    }
+  
+    .text-area-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    textarea {
+      font-size: 0.9em;
+      height: 100px;
+    }
+  
+    button {
+      font-size: 0.9em;
+      padding: 10px 18px;
+    }
+  
+    .translator-card h2 {
+      font-size: 1.5em;
+    }
+  
+    .greeting {
+      font-size: 1.2em; /* Smaller greeting font on mobile */
+      padding-left: 10px; /* Less left padding */
+    }
+  }
+  
+  /* Small screens */
+  @media (max-width: 480px) {
+    .translator-card {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .translator-card h2 {
+      font-size: 1.3em;
+    }
+  
+    textarea {
+      font-size: 0.85em;
+      height: 90px;
+    }
+  
+    button {
+      font-size: 0.85em;
+      padding: 8px 16px;
+    }
+  
+    .greeting {
+      font-size: 1em; /* Smaller greeting font */
+      padding-left: 5px; /* Less left padding */
+    }
+  }
+  
